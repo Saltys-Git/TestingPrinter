@@ -10,13 +10,6 @@ export default function Home() {
             <Text bold={true}>결제 완료</Text>
             <Br />
             <Line />
-            <Row left="결제방법" right="체크카드" />
-            <Row left="카드번호" right="123456**********" />
-            <Row left="할부기간" right="일시불" />
-            <Row left="결제금액" right="9,500" />
-            <Row left="부가세액" right="863" />
-            <Row left="공급가액" right="8,637" />
-            <Line />
             <Row left={<Text bold={true}>맛있는 옥수수수염차 X 2</Text>} right="11,000" />
             <Row left="(-) 할인" right="- 500" />
             <Br />
