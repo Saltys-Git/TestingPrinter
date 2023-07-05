@@ -23,7 +23,7 @@ export default function HelloWorldPrinter() {
 
             setTimeout(() => {
                 barcodeScan = ""
-            },100)
+            },1000)
         }
 
         if (isBrowser()) {
