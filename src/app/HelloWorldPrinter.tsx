@@ -1,5 +1,4 @@
 'use client'
-import useScanDetection from 'use-scan-detection';
 import {useEffect, useState} from "react";
 
 
@@ -12,11 +11,11 @@ export default function HelloWorldPrinter() {
 
         function handleKeyDown(e: any) {
             setValue2(e.key)
-            if (e.key === 13 && barcodeScan.length > 3) {
+            if (e.key === "Enter" && barcodeScan.length > 6) {
                 handleScan(barcodeScan)
                 return
             }
-            if (e.key === 16) {
+            if (e.key === "Shift") {
                 return
             }
 
