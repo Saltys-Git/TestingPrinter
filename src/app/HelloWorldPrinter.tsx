@@ -1,17 +1,17 @@
 'use client'
 import {useEffect, useState} from "react";
 
-
+let barcodeScan = ""
 export default function HelloWorldPrinter() {
     const [value, setValue] = useState("asd");
     const [value2, setValue2] = useState("asd");
     const isBrowser = () => typeof window !== 'undefined'; //The approach recommended by Next.js
-    let barcodeScan = ""
+
     useEffect(()=>{
 
         function handleKeyDown(e: any) {
             setValue2(e.key)
-            if (e.key === "Enter" && barcodeScan.length > 6) {
+            if (e.key === "Enter" && barcodeScan.length > 5) {
                 handleScan(barcodeScan)
                 return
             }
@@ -23,7 +23,7 @@ export default function HelloWorldPrinter() {
 
             setTimeout(() => {
                 barcodeScan = ""
-            },1000)
+            },100)
         }
 
         if (isBrowser()) {
@@ -41,8 +41,8 @@ export default function HelloWorldPrinter() {
     }
     return (
         <div>
-            <p className="text-4xl">{value}</p>
-            <p className="text-4xl">{value2}</p>
+            <p className="text-4xl text-black">{value}</p>
+            <p className="text-4xl text-green-800">{value2}</p>
         </div>
     );
 }
