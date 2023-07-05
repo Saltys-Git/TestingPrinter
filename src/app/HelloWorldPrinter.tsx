@@ -6,7 +6,7 @@ export default function HelloWorldPrinter() {
     useScanDetection({
         onComplete: setValue,
         minLength: 13 // EAN13
-    });
+    })
 
     return (
         <input
