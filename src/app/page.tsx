@@ -13,10 +13,10 @@ function IP() {
 }
 
 export default function Page() {
-    // @ts-ignore
+    const ip = IP()
     return (
         <Suspense fallback={null}>
-            <IP />
+            {ip}
         </Suspense>
     )
 }
